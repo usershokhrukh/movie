@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+
+  &__form {
+    width: 100%;
+    padding: 2% 10% 2% 1% ;
+  }
+
+  &__form-input {
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.519);
+    border-radius: 5px;
+  }
+  &__section {
+    // background-color: blue;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 2%;
+  }
+
+  &__cards:nth-child(1) {
+    // background-color: red;
+    grid-column: 1/3;
+
+    & img {
+      width: 60%;
+      height: 50%;
+      max-width:1000px;
+      max-height: 1300px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__cards-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__cards-img {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(155, 171, 6, 0.519);
+  }
+
+  &__cards-stats-title {
+    font-family: sans-serif;
+    font-size: 43px;
+    // background-color: blue;
+    word-break: break-all ;
+  }
+
+  &__cards-stats-box {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__cards-stats-year, 
+  &__cards-stats-type {
+    font-family: sans-serif;
+    font-size: 17px;
+  }
+
+  &__cards-stats-type-s {
+    background-color: rgb(0, 140, 255);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    padding: 2px 4px;
+  }
+
+  &__cards-stats-year-s {
+    background-color: rgb(255, 174, 0);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    padding: 2px 4px;
+  }
+
+  &__cards-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    grid-column: 3/5;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .main {
+    &__cards-stats-title {
+      font-size: 20px;
+    }
+
+    &__cards-stats-year,
+    &__cards-stats-type {
+      font-size: 10px;
+    }
+
+    &__cards-stats {
+      gap: 5px;
+    }
+
+    &__cards-stats-year-s, 
+    &__cards-stats-type-s{
+      font-size: 8px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    &__section {
+      height: auto !important;
+      min-height: none;
+      grid-template-columns: auto !important;
+      grid-row: auto auto  !important;
+      gap: 0px
+    }
+
+    &__cards:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2 !important;
+      // height: 100px;
+    }
+
+    &__cards-right {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+}
