@@ -1,14 +1,13 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 .main {
-
   &__form {
     width: 100%;
-    padding: 2% 10% 2% 1% ;
+    padding: 2% 10% 2% 1%;
   }
 
   &__form-input {
@@ -25,18 +24,18 @@
     // background-color: blue;
     min-height: 80vh;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
     padding: 2%;
   }
 
   &__cards-first {
     // background-color: red;
-    grid-column: 1/4 !important;
+    grid-column: 1/2 !important;
 
     & img {
       width: 60%;
       height: 50%;
-      max-width:1000px;
+      max-width: 1000px;
       max-height: 1300px;
     }
   }
@@ -45,7 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-column: 3/4;
+    grid-column: 2/3;
     gap: 10px;
   }
 
@@ -61,11 +60,10 @@
     box-shadow: 0px 0px 10px 0px rgba(155, 171, 6, 0.519);
   }
 
-  &__cards-stats-title {
+  &__cards-stats-title-first {
     font-family: sans-serif;
-    font-size: 43px;
-    // background-color: blue;
-    word-break: break-all ;
+    font-size: 33px !important;
+    word-break: break-all;
   }
 
   &__cards-stats-box {
@@ -73,10 +71,21 @@
     gap: 10px;
   }
 
-  &__cards-stats-year, 
-  &__cards-stats-type {
+  &__cards-stats-year-first,
+  &__cards-stats-type-first {
     font-family: sans-serif;
     font-size: 17px;
+  }
+
+  &__cards-stats-title {
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  &__cards-stats-year,
+  &__cards-stats-type {
+    font-size: 10px;
+    font-family: sans-serif;
   }
 
   &__cards-stats-type-s {
@@ -99,10 +108,8 @@
     align-items: center;
     gap: 20px;
     width: 100%;
-    grid-column: 4/5;
-    // max-width: 600px;
+    grid-column: 2/3;
   }
-
 }
 
 @media (max-width: 700px) {
@@ -120,8 +127,8 @@
       gap: 5px;
     }
 
-    &__cards-stats-year-s, 
-    &__cards-stats-type-s{
+    &__cards-stats-year-s,
+    &__cards-stats-type-s {
       font-size: 8px;
     }
   }
@@ -133,8 +140,8 @@
       height: auto !important;
       min-height: none;
       grid-template-columns: auto !important;
-      grid-row: auto auto  !important;
-      gap: 0px
+      grid-row: auto auto !important;
+      gap: 0px;
     }
 
     &__cards-first {
